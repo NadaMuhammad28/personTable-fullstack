@@ -1,4 +1,4 @@
-# Project Name
+# Person POC
 
 ## Overview
 This project is a web application developed using the MVC pattern with Express, Node.js, and MySQL on the server-side, and Angular with ng-zorro on the client-side.
