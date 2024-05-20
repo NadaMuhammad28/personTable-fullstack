@@ -1,0 +1,57 @@
+<form nz-form [formGroup]="form" (ngSubmit)="submit()">
+  <!-- NAME -->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="24" nzRequired>Name</nz-form-label>
+    <nz-form-control [nzSpan]="24" [nzErrorTip]="getErrorMessage('name')">
+      <input nz-input formControlName="name" placeholder="Name" />
+    </nz-form-control>
+  </nz-form-item>
+  <!-- AGE -->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="24" nzRequired>Age</nz-form-label>
+    <nz-form-control [nzSpan]="24" [nzErrorTip]="getErrorMessage('age')">
+      <input nz-input formControlName="age" placeholder="Age" type="number" />
+    </nz-form-control>
+  </nz-form-item>
+  <!-- NATIONALity -->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="24" nzRequired>Nationality ID</nz-form-label>
+    <nz-form-control
+      [nzSpan]="24"
+      [nzErrorTip]="getErrorMessage('nationalityID')"
+    >
+      <input
+        nz-input
+        type="number"
+        formControlName="nationalityID"
+        placeholder="Nationality ID"
+      />
+    </nz-form-control>
+  </nz-form-item>
+
+  <!-- DOB-->
+  <nz-form-item>
+    <nz-form-label [nzSpan]="24" nzRequired>BirthDate</nz-form-label>
+    <nz-form-control [nzSpan]="24" [nzErrorTip]="getErrorMessage('birthDate')">
+      <nz-date-picker
+        style="width: 100%"
+        formControlName="birthDate"
+      ></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <!-- BUTTONS -->
+  <nz-form-item>
+    <nz-form-control [nzSpan]="8">
+      <nz-row nzGutter="4">
+        <nz-col nzSpan="12">
+          <button nz-button nzType="primary" [disabled]="!form.valid">
+            Submit
+          </button>
+        </nz-col>
+        <nz-col nzSpan="12">
+          <button nz-button nzType="default" (click)="cancel()">Cancel</button>
+        </nz-col>
+      </nz-row>
+    </nz-form-control>
+  </nz-form-item>
+</form>
