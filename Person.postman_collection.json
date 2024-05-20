@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "67ab8242-75a8-4c43-8a7a-130fa301b7df",
+		"name": "Person",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34765326"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzeXNVc2VySWQiOjIsInN1YiI6InN5c3RlbS5hZG1pbiIsImlhdCI6MTcxNTI0NTU4OSwiZXhwIjoxNzE1MjQ5MTg5fQ.26P25T_JFoa8ZpZBwR7yWQQeHJ6la9WZ9sRdabZbGw0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Nada\",\r\n  \"age\": 22,\r\n  \"nationalityID\": 11,\r\n  \"birthDate\": \"1999-01-01T00:00:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
